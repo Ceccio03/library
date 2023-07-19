@@ -1,13 +1,11 @@
 let library;
 
-DBService.getAllBooks()
-.then(books =>{
+DBService.getAllBooks().then(books => {
     library = new Library(books);
     render();
-})
+});
 
-function render(){
-
+function render() {
     const booksContainer = document.getElementById('main-container');
     booksContainer.innerHTML = '';
 
