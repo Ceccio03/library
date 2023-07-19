@@ -1,9 +1,10 @@
-let library;
+DBService.readPost();
 
-DBService.getAllBooks().then(books => {
-    library = new Library(books);
-    render();
-});
+const mioPost = {
+    title: 'il mio nuovo post',
+    userId: 1,
+    body: 'ciao a tutti ecco il mio nuovo post'
+}
 
 function render() {
     const booksContainer = document.getElementById('main-container');
